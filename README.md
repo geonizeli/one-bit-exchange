@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requeriments
 
-Things you may want to cover:
+* Docker >= 17
+* Currency Data Feed API Token
 
-* Ruby version
+## Setup
 
-* System dependencies
+	docker-compose build
+	docker-compose run --rm app bundle exec rails db:create
+	docker-compose run --rm app bundle exec rails db:migrate
+	docker-compose up
 
-* Configuration
+## Screenshot
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Single Page](preview.png)
