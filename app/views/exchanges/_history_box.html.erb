@@ -1,0 +1,32 @@
+<div class='exchange_box col-sm-12'>
+  <div class='card'>
+
+    <div class='card-header text-center'>
+      Histórico de conversão
+    </div>
+
+    <div class='card-block overflow-auto'>
+      <table class='table '>
+        <th>
+          <th>In</th>
+          <th>For</th>
+          <th>Amount</th>
+          <th>Price</th>
+          <th>Result</th>
+          <th>Date</th>
+        </th>
+        <% @history.each do |element| %>
+        <tr>
+          <td></td>
+          <td><%= element.in %></td>
+          <td><%= element.for %></td>
+          <td><%= element.amount %></td>
+          <td><%= element.price %></td>
+          <td><%= element.result %></td>
+          <td><%= element.created_at %></td>
+        </th>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>

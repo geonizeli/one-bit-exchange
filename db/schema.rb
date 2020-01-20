@@ -10,9 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2020_01_20_224713) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "histories", force: :cascade do |t|
+    t.string "in"
+    t.string "for"
+    t.decimal "amount", precision: 4
+    t.decimal "price", precision: 4
+    t.decimal "result", precision: 4
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
