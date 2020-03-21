@@ -15,3 +15,34 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+function pollDOM () {
+  const el = document.getElementById('amount');
+
+  if (el != null) {
+    $('#amount').keyup(function(){
+      $('#submit-btn').click()
+   });
+  } else {
+    setTimeout(pollDOM, 300);
+  }
+}
+
+pollDOM();
+
+function pollDOM1 () {
+  const el = document.getElementById('invert');
+
+  if (el != null) {
+    $('#invert').click(function(){
+      let temp1 = document.getElementById('source_currency').selectedIndex
+      let temp2 = document.getElementById('target_currency').selectedIndex
+      document.getElementById('source_currency').selectedIndex = temp2
+      document.getElementById('target_currency').selectedIndex = temp1
+   });
+  } else {
+    setTimeout(pollDOM1, 300);
+  }
+}
+
+pollDOM1();

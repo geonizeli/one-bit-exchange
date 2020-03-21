@@ -10,10 +10,9 @@ body {
 
 .container {
   margin: auto;
-  max-width: 70%;
-  text-align: center;
-  background-color: #ffffff1f;
+  max-width: 500px;
   min-height: 100vh;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -23,18 +22,19 @@ body {
   }
 }
 
-.card-header {
-  font-size: 2rem;
-  color: white;
+.exchange_box {
+  margin-top: 30px;
 }
 
 .card-block {
   margin-top: 30px;
   color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  max-width: 400px;
   form {
-    margin: auto;
-    max-width: 300px;
-
     button {
       display: none;
     }
@@ -43,6 +43,15 @@ body {
   .sym {
     margin: 20px;
     font-size: 32px;
+  }
+  .invert {
+    cursor: pointer;
+    transform: rotate(90deg);
+    transition: all ease 0.3s;
+    &:hover {
+      transition: all ease 0.3s;
+      color: #7040af;
+    }
   }
 }
 
