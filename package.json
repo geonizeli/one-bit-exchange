@@ -1,8 +1,11 @@
 {
- "engines" : { "node" : ">=6" },
+  "engines": {
+    "node": ">=6"
+  },
   "name": "OneBitExchange",
   "private": true,
   "dependencies": {
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "tether": "^1.4.7"
   }
 }
