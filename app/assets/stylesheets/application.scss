@@ -1,65 +1,63 @@
 body {
-  //background: image-url("/background-img.jpg") no-repeat center center fixed;
-  background-color: #2d1152;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-color: rgb(24, 26, 27);
+  min-height: 100vh;
+  color: #ffffff;
   margin: 0;
+  font-size: 65.5%;
 }
 
 .container {
-  margin: auto;
   max-width: 500px;
-  min-height: 100vh;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-
-  .content {
-    margin-bottom: 100px;
-  }
-}
-
-.exchange_box {
-  margin-top: 30px;
-}
-
-.card-block {
-  margin-top: 30px;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   margin: auto;
-  max-width: 400px;
-  form {
-    button {
-      display: none;
-    }
+  text-align: center;
+  padding-top: 10%;
+
+  input {
+    font-size: 1rem;
+    border-radius: 4.5px;
+    border: none;
+    padding: 10px;
+  }
+
+  .destination_currency input {
+    color: #ffffff;
+    background: none;
+  }
+
+  select {
+    font-size: 1rem;
+    margin-left: 8px;
+    border-radius: 4.5px;
+    padding: 7px;
   }
 
   .sym {
-    margin: 20px;
-    font-size: 32px;
+    font-size: 2rem;
+    margin: 20px 0px;
   }
+
   .invert {
+    margin: auto;
     cursor: pointer;
     transform: rotate(90deg);
-    transition: all ease 0.3s;
+    transition: all ease 0.2s;
+    padding: 20px;
 
     &:hover {
-      transition: all ease 0.3s;
+      transition: all ease 0.2s;
       color: #7040af;
     }
   }
-}
 
-.destination_currency, .local_currency {
-  input, select {
-    border-radius: 3px;
-    padding: 5px;
+  button {
+    display: none;
+  }
+
+  .card-block {
+    display: flex;
+    justify-content: space-between;
+    max-width: 390px;
+    margin: auto;
+    margin-top: 40px;
   }
 }
-

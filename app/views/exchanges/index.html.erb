@@ -1,7 +1,33 @@
 <div class='container'>
-  <div class='content'>
+  <div class='logo'>
     <%= image_tag '/logo.png'%>
-
-    <%= render 'exchange_box' %>
   </div>
+  <div class='exchange_box'>
+  <div class='card'>
+    <div class='card-block'>
+      <%= form_tag('/convert', method: :get, id: 'exchange_form') do %>
+        <div class='local_currency'>
+            <input type='number' name='amount' id='amount' placeholder='Quantidade ($10)' step='any' required>
+            <%= select_tag 'source_currency', options_for_select(currency_list, 'BRL'), id: 'source_currency' %>
+        </div>
+
+        <div class='sym'>
+          <i class="fas fa-arrow-down"></i>
+        </div>
+
+        <div class='destination_currency'>
+            <input type='text' id='result' name='result' placeholder='Resultado' readonly>
+            <%= select_tag 'target_currency', options_for_select(currency_list, 'BTC'), id: 'target_currency'%>
+        </div>
+        <div>
+          <button type='submit' id='submit-btn'></button>
+        </div>
+      <% end %>
+
+      <div class='invert sym' id='invert'>
+        <i class="fas fa-exchange-alt"></i>
+      </div>
+    </div>
+  </div>
+</div>
 </div>

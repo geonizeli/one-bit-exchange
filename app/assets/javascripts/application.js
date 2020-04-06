@@ -23,13 +23,13 @@ function pollDOM () {
   if (el != null) {
     $('#amount').keyup(function(){
       $('#submit-btn').click()
-   });
+   })
   } else {
-    setTimeout(pollDOM, 300);
+    setTimeout(pollDOM, 300)
   }
 }
 
-pollDOM();
+pollDOM()
 
 function pollDOM1 () {
   const el = document.getElementById('invert');
@@ -40,10 +40,12 @@ function pollDOM1 () {
       let temp2 = document.getElementById('target_currency').selectedIndex
       document.getElementById('source_currency').selectedIndex = temp2
       document.getElementById('target_currency').selectedIndex = temp1
+
+      setTimeout($('#submit-btn').click(), 500)
    });
   } else {
-    setTimeout(pollDOM1, 300);
+    setTimeout(pollDOM1, 300)
   }
 }
 
-pollDOM1();
+pollDOM1()
